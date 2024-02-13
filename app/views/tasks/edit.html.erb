@@ -1,0 +1,11 @@
+<h2>Edit <%= @task.title%></h2>
+
+<%= form_with model: @restaurant do |f| %>
+  <%= f.label :title%>
+  <%= f.text_field :title, placeholder: @task.title %>
+  <%= f.label :details %>
+  <%= f.text_field :details, placeholder: @task.details %>
+  <%= f.label :completed %>
+  <%= f.check_box :completed %>
+  <%= f.submit %>
+<% end %>
